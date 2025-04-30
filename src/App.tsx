@@ -7,7 +7,7 @@ import { setTodos } from './features/todos';
 import { useDispatch, useSelector } from 'react-redux';
 export const App = () => {
   const [loading, setLoading] = useState(false);
-  const todos = useSelector(state => state.filter);
+  const todos = useSelector(state => state.todos);
   const currentTodo = useSelector(state => state.currentTodo);
   const dispatch = useDispatch();
 

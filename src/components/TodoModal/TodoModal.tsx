@@ -6,7 +6,11 @@ import { clearCurrentUser, setCurrentUser } from '../../features/currentUser';
 import { Loader } from '../Loader';
 import { getUser } from '../../api';
 
-export const TodoModal: React.FC = ({ setLoading }) => {
+export const TodoModal: React.FC = ({
+  setLoading,
+}: {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const dispatch = useDispatch();
 
   const currentTodo = useSelector(state => state.currentTodo);
